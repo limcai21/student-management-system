@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<title>Student Management System</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/addstudent.js"></script>
+</head>
+
+
+<body id="formBody"> 
+  <div id="wrapper">
+    <div id="header">
+      <div title="Page 2">
+        <p>Student Management System</p>
+      </div>
+      <div id="topnav">
+        <ul>
+          <li>
+            <a id="homebutton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 24 24"><path d="M21 13v10h-6v-6h-6v6h-6v-10h-3l12-12 12 12h-3zm-1-5.907v-5.093h-3v2.093l3 3z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a id="addstudentbutton" style="color: black;">Add Student</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  <div id="formDiv">
+      <form id="studentForm">
+        <span>* Required</span>
+        <p></p>
+        <span>*</span>
+        Surname: <br>
+        <input type="text" id="surname">
+        <span id="surnameError" style="display: none;">*Surname Is Required and Only Alphabets is Allow</span>
+        <br>
+        <span>*</span>
+        Name: <br>
+        <input type="text" id="name">
+        <span id="nameError" style="display: none;">*Name Is Required and Only Alphabets is Allow</span>
+        <br>
+        <span>*</span>
+        Gender:
+        <input type="radio" name="gender" id="gender" value="Male">Male
+        <input type='radio' name="gender" id="gender" value="Female">Female
+        <span id="genderError" style="display: none;">*Gender Is Required</span>
+        <br>
+        <span>*</span>
+        Address: <br>
+        <textarea type="text" id="address" cols="50" rows="5"></textarea>
+        <span id="addressError" style="display: none;">*Address Is Required</span>
+        <br>
+        Email: <br>
+        <input type="text" id="emailaddress" name="email">
+        <span id="emailError" style="display: none;">*Enter Valid Email</span>
+        <br>
+        Phone Number: <br>
+        <input type="number" id="phone" onkeydown='javascript: return event.keyCode === 8 || event.keyCode === 46 ? true : !isNaN(Number(event.key))'>
+        <span id="phoneError" style="display: none;">*Phone Number Is Required</span>
+        <p></p>
+        <input type="submit" id="insert" value="Insert">
+        <input type="reset" id="cancel" value="Cancel">
+      </form>
+    </div>
+    <center>
+    <div id="tableOutput" style="background-color:#B5EAD7; padding: 15px 25px;">
+      <table width="910px" border="3" style="border-collapse: collapse; background-color: white; text-align: center;">
+        <tr>
+          <th>ID</th>
+          <th>Surname<span>*</span></th>
+          <th>Name<span>*</span></th>
+          <th>Gender<span>*</span></th>
+          <th>Address<span>*</span></th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Action</th>
+        </tr>
+      </table>
+    </div>
+  </center>
+    <div id="footer">Copyright &COPY; ITE - All Right Reserved</div>
+</body>
+</html>
